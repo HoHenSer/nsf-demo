@@ -1,16 +1,12 @@
 nsf:
-  type: springboot2.1
+  type: http
   version: '2.0'
   nsfServer: 'http://nsf-server-cust92.netease.com'
   application:
     name: stock-provider
-    version: 0.0.2
+    version: 0.0.1
     projectCode: yangchenggang
+    envCode: prod
   authority:
     accessKey: 2f078407b7ee41bf93e85fbed750341f	
     secretKey: d6d64b3aaaba4be2888fc18928d17d53
-  manager:
-    patterns: []
-  relations:
-    services: []
-    versions: []
