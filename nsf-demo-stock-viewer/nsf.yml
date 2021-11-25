@@ -5,7 +5,7 @@ nsf:
   application:
     name: stock-viewer
     version: 0.0.1
-    projectCode: wangbicheng
+    projectCode: yangchenggang
     envCode: prod
     zone: default
     group: default
@@ -26,5 +26,5 @@ nsf:
       - '.*'
 
   authority:
-    accessKey: 33ada08bf75c49fb8842bf19e916911e
-    secretKey: 1ade96b5cf17455a9ec7a712ebfa70ac
+    accessKey: 2f078407b7ee41bf93e85fbed750341f
+    secretKey: d6d64b3aaaba4be2888fc18928d17d53
