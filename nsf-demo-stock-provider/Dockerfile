@@ -10,7 +10,7 @@ ADD ./nsf-demo-stock-provider/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && cd /opt/apm && \
-    wget "http://console-cust92.netease.com/download/napm/napm-java-agent-v5.3.3-200428-eda3e5cb.tar.gz" -O napm-java-agent.tar.gz && \
+    wget "http://console-cust92.netease.com/download/napm/napm-java-agent-v5.4.9-201112-26f1516.tar.gz" -O napm-java-agent.tar.gz && \
     tar zxvf napm-java-agent.tar.gz && \
     cd ./napm-java-agent/conf && \
     echo "endpoint=http://apm-collector-cust92.netease.com" >> napm-agent.properties && \
