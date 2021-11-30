@@ -10,8 +10,7 @@ ADD nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && cd /opt/apm && \
-    wget http://console-cust92.netease.com/download/napm/skywalking-napm-bin-8.0.0-latest.tar.gz -O skywalking-napm-bin-8.0.0-latest.tar.gz
- -O napm-java-agent.tar.gz && \
+    wget http://console-cust92.netease.com/download/napm/skywalking-napm-bin-8.0.0-latest.tar.gz -O napm-java-agent.tar.gz && \
     tar zxvf napm-java-agent.tar.gz && \
     cd ./napm-java-agent/conf && \
     echo "collector.backend_service=apm-otel-collector-cust92.netease.com:11800" >> agent.properties && \
