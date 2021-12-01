@@ -10,12 +10,13 @@ ADD ./nsf-demo-stock-provider/nsf.yml /opt/nsf/nsf.yml
 
 #add apm agent jar and config file
 RUN mkdir -p /opt/apm && cd /opt/apm && \
-    wget "http://console-cust92.netease.com/download/napm/napm-java-agent-v5.4.9-201112-26f1516.tar.gz" -O napm-java-agent.tar.gz && \
-    tar zxvf napm-java-agent.tar.gz && \
-    cd ./napm-java-agent/conf && \
-    echo "endpoint=http://apm-collector-cust92.netease.com" >> napm-agent.properties && \
-    echo "productId=91-stock" >> napm-agent.properties && \
-    echo "service=stock-provider" >> napm-agent.properties
+    wget http://console-cust92.netease.com/download/napm/skywalking-napm-bin-8.0.0-latest.tar.gz -O skywalking-napm-bin-8.0.0-latest.tar.gz && \
+    tar zxvf skywalking-napm-bin-8.0.0-latest.tar.gz && \
+    cd ./skywalking-napm-bin-8.0.0-latest/agent/config && \
+    echo "collector.backend_service=apm-otel-collector-cust92.netease.com:11800" >> agent.properties && \
+    echo "agent.authentication=189-ycg-demo" >> agent.properties && \
+    echo "agent.service_name=webserver" >> agent.properties
+
 
 #add run command
 ADD ./nsf-demo-stock-provider/run.sh  /opt/nsf/
