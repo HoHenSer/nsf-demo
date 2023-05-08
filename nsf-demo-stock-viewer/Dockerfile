@@ -12,10 +12,10 @@ ADD ./nsf-demo-stock-viewer/nsf.yml /opt/nsf/nsf.yml
 RUN mkdir -p /opt/apm && cd /opt/apm && \
     wget "http://console.qz.sf.163.com/download/napm/skywalking-napm-bin-8.10.0-latest.tar.gz" -O napm-java-agent.tar.gz && \
     tar zxvf napm-java-agent.tar.gz && \
-    cd ./napm-java-agent/conf && \
-    echo "endpoint=http://apm-collector.qz.sf.163.com" >> napm-agent.properties && \
-    echo "productId=MTgtc29sdXRpb24" >> napm-agent.properties && \
-    echo "service=ycg-stock-viewer" >> napm-agent.properties
+    cd ./napm-java-agent/agent/conf && \
+    echo "collector.backend_service=http://apm-collector.qz.sf.163.com" >> napm-agent.properties && \
+    echo "agent.authentication=MTgtc29sdXRpb24" >> agent.config && \
+    echo "agent.service_name=ycg-stock-viewer" >> agent.config
 
 #add run command
 ADD ./nsf-demo-stock-viewer/run.sh  /opt/nsf/
