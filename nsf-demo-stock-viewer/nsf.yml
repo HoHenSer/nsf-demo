@@ -11,20 +11,18 @@ nsf:
     group: default
     tags: []
 
-  # 方法配置
+nsf:
+  type: http
+  nsfServer: 'http://nsf-server.qz.sf.163.com'
+  application:
+    name: ycg-demo-viewer
+    version: 0.0.1
+    projectCode: poc
+    envCode: prod
+    mark: ""
+    group: default
+    tags: []
   manager:
     patterns:
-    - className: com.netease.cloud.nsf.demo.stock.viewer.web.service.impl.*
-
-  # 应用监控
-  metric:
-    enable: true
-    custom:
-      enable: true
-      includes:
-      - 'jvm.*'
-      - '.*'
-
-  authority:
-    accessKey: 2f078407b7ee41bf93e85fbed750341f
-    secretKey: d6d64b3aaaba4be2888fc18928d17d53
+      -
+        className: ""
