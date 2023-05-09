@@ -1,16 +1,15 @@
 nsf:
   type: http
-  version: '2.0'
-  nsfServer: 'http://nsf-server-cust92.netease.com'
+  nsfServer: 'http://nsf-server.qz.sf.163.com'
   application:
-    name: stock-advisor
+    name: ycg-demo-advisor
     version: 0.0.1
-    projectCode: yangchenggang
+    projectCode: poc
     envCode: prod
-    zone: default
+    mark: ""
     group: default
     tags: []
-
-  authority:
-    accessKey: 2f078407b7ee41bf93e85fbed750341f
-    secretKey: d6d64b3aaaba4be2888fc18928d17d53
+  manager:
+    patterns:
+      -
+        className: ""
