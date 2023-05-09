@@ -14,7 +14,7 @@ RUN mkdir -p /opt/apm && cd /opt/apm && \
     tar zxvf skywalking-napm-bin-8.10.0-latest.tar.gz && \
     cd ./skywalking-napm-bin-8.10.0-latest/agent/config && \
     echo "collector.backend_service=apm-otel-collector.qz.sf.163.com:11800" >> agent.config && \
-    echo "agent.authentication=MTgtc29sdXRpb24" >> agent.config && \
+    echo "agent.authentication=MTgtc29sdXRpb24=" >> agent.config && \
     echo "agent.service_name=ycg-stock-viewer" >> agent.config
 
 #add run command
